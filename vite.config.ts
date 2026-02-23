@@ -5,7 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/', // Use '/' for root deploy, or '/vanuatu-land-cover/' for project site
+  base: '/vanuatu_land_account_dashboard/', // Use '/' for root deploy, or '/vanuatu-land-cover/' for project site
   plugins: [
     react(),
     tailwindcss(),
