@@ -1,0 +1,172 @@
+Court,Year,Metric,Value,Unit
+Court of Appeal,2019,Filings,78,
+Court of Appeal,2019,Disposals,76,
+Court of Appeal,2019,ClearanceRate,97,%
+Court of Appeal,2019,Pending,28,
+Court of Appeal,2019,PDR,0.37,
+Court of Appeal,2019,PendingAge,0,%
+Court of Appeal,2019,TimelinessCriminal,100,days
+Court of Appeal,2019,TimelinessCivil,150,days
+Court of Appeal,2019,ReservedJudgments,0,
+Supreme Court,2019,Filings,733,
+Supreme Court,2019,Disposals,710,
+Supreme Court,2019,ClearanceRate,97,%
+Supreme Court,2019,Pending,1223,
+Supreme Court,2019,PDR,1.7,
+Supreme Court,2019,PendingAge,25,%
+Supreme Court,2019,TimelinessCriminal,261,days
+Supreme Court,2019,TimelinessCivil,767,days
+Supreme Court,2019,AttendanceCriminal,4,%
+Supreme Court,2019,AttendanceCivil,5.5,%
+Supreme Court,2019,AttendanceEnforcement,8,%
+Supreme Court,2019,Productivity,90,
+Supreme Court,2019,ReservedJudgments,22,
+Magistrates Court,2019,Filings,2217,
+Magistrates Court,2019,Disposals,2003,
+Magistrates Court,2019,ClearanceRate,90,%
+Magistrates Court,2019,Pending,1062,
+Magistrates Court,2019,PDR,0.5,
+Magistrates Court,2019,PendingAge,20,%
+Magistrates Court,2019,TimelinessCriminal,166,days
+Magistrates Court,2019,TimelinessCivil,300,days
+Magistrates Court,2019,AttendanceCriminal,3.1,%
+Magistrates Court,2019,AttendanceCivil,5.7,%
+Magistrates Court,2019,AttendanceEnforcement,9,%
+Magistrates Court,2019,Productivity,230,
+Magistrates Court,2019,ReservedJudgments,2,
+Island Court,2019,Filings,286,
+Island Court,2019,Disposals,245,
+Island Court,2019,ClearanceRate,85,%
+Island Court,2019,Pending,670,
+Island Court,2019,PDR,2.7,
+Island Court,2019,PendingAge,80,%
+Island Court,2019,TimelinessCriminal,350,days
+Island Court,2019,TimelinessCivil,450,days
+Supreme Court,2019,Gender_Male,64,%
+Supreme Court,2019,Gender_Female,36,%
+Magistrates Court,2019,Gender_Male,68,%
+Magistrates Court,2019,Gender_Female,32,%
+Court of Appeal,2019,Civil_Guilty,26,%
+Court of Appeal,2019,Civil_NotGuilty,0,%
+Court of Appeal,2019,Civil_Withdrawn,14,%
+Court of Appeal,2019,Civil_Committed,0,%
+Court of Appeal,2019,Civil_Dismissed,60,%
+Supreme Court,2019,Criminal_Guilty,85,%
+Supreme Court,2019,Criminal_NotGuilty,7,%
+Supreme Court,2019,Criminal_Withdrawn,8,%
+Supreme Court,2019,Criminal_Committed,0,%
+Supreme Court,2019,Criminal_Dismissed,0,%
+Magistrates Court,2019,Criminal_Guilty,67,%
+Magistrates Court,2019,Criminal_NotGuilty,1,%
+Magistrates Court,2019,Criminal_Withdrawn,25,%
+Magistrates Court,2019,Criminal_Committed,0,%
+Magistrates Court,2019,Criminal_Dismissed,7,%
+Magistrates Court,2019,PI_Guilty,0,%
+Magistrates Court,2019,PI_NotGuilty,0,%
+Magistrates Court,2019,PI_Withdrawn,19,%
+Magistrates Court,2019,PI_Committed,77,%
+Magistrates Court,2019,PI_Dismissed,4,%
+Supreme Court,2019,Workload_Total_Filings,733,
+Supreme Court,2019,Workload_Total_Disposals,710,
+Supreme Court,2019,Workload_Total_ClearanceRate,97,%
+Supreme Court,2019,Workload_Criminal_Filings,240,
+Supreme Court,2019,Workload_Criminal_Disposals,235,
+Supreme Court,2019,Workload_Criminal_ClearanceRate,98,%
+Magistrates Court,2019,Workload_Total_Filings,2217,
+Magistrates Court,2019,Workload_Total_Disposals,2003,
+Magistrates Court,2019,Workload_Total_ClearanceRate,90,%
+Magistrates Court,2019,Workload_Criminal_Filings,850,
+Magistrates Court,2019,Workload_Criminal_Disposals,800,
+Magistrates Court,2019,Workload_Criminal_ClearanceRate,94,%
+Magistrates Court,2019,Workload_PI_Filings,330,
+Magistrates Court,2019,Workload_PI_Disposals,310,
+Magistrates Court,2019,Workload_PI_ClearanceRate,94,%
+Magistrates Court,2019,Workload_Violence_Filings,1037,
+Magistrates Court,2019,Workload_Violence_Disposals,893,
+Magistrates Court,2019,Workload_Violence_ClearanceRate,86,%
+Island Court,2019,Workload_Total_Filings,286,
+Island Court,2019,Workload_Total_Disposals,245,
+Island Court,2019,Workload_Total_ClearanceRate,85,%
+Island Court,2019,Workload_Criminal_Filings,143,
+Island Court,2019,Workload_Criminal_Disposals,120,
+Island Court,2019,Workload_Criminal_ClearanceRate,84,%
+Island Court,2019,Workload_Maintenance_Filings,143,
+Island Court,2019,Workload_Maintenance_Disposals,125,
+Island Court,2019,Workload_Maintenance_ClearanceRate,87,%
+Court of Appeal,2019,Workload_Total_Filings,78,
+Court of Appeal,2019,Workload_Total_Disposals,76,
+Court of Appeal,2019,Workload_Total_ClearanceRate,97,%
+Court of Appeal,2019,Workload_Civil_Filings,43,
+Court of Appeal,2019,Workload_Civil_Disposals,42,
+Court of Appeal,2019,Workload_Civil_ClearanceRate,98,%
+Court of Appeal,2019,Workload_Criminal_Filings,35,
+Court of Appeal,2019,Workload_Criminal_Disposals,34,
+Court of Appeal,2019,Workload_Criminal_ClearanceRate,97,%
+Supreme Court,2019,Pending_Civil,673,
+Supreme Court,2019,Pending_Civil_Pct,55,%
+Supreme Court,2019,Pending_Criminal,428,
+Supreme Court,2019,Pending_Criminal_Pct,35,%
+Supreme Court,2019,Pending_Other,122,
+Supreme Court,2019,Pending_Other_Pct,10,%
+Magistrates Court,2019,Pending_Criminal,372,
+Magistrates Court,2019,Pending_Criminal_Pct,35,%
+Magistrates Court,2019,Pending_Violence,319,
+Magistrates Court,2019,Pending_Violence_Pct,30,%
+Magistrates Court,2019,Pending_PI,212,
+Magistrates Court,2019,Pending_PI_Pct,20,%
+Magistrates Court,2019,Pending_Other,159,
+Magistrates Court,2019,Pending_Other_Pct,15,%
+Island Court,2019,Pending_Criminal,235,
+Island Court,2019,Pending_Criminal_Pct,35,%
+Island Court,2019,Pending_Maintenance,235,
+Island Court,2019,Pending_Maintenance_Pct,35,%
+Island Court,2019,Pending_Other,200,
+Island Court,2019,Pending_Other_Pct,30,%
+Court of Appeal,2019,Pending_Civil,14,
+Court of Appeal,2019,Pending_Civil_Pct,50,%
+Court of Appeal,2019,Pending_Criminal,14,
+Court of Appeal,2019,Pending_Criminal_Pct,50,%
+Supreme Court,2019,Pending_WithFutureListing,32,%
+Supreme Court,2019,Pending_UnderCaseMgmt,50,%
+Supreme Court,2019,Pending_NoFutureDate,18,%
+Magistrates Court,2019,Pending_WithFutureListing,30,%
+Magistrates Court,2019,Pending_UnderCaseMgmt,60,%
+Magistrates Court,2019,Pending_NoFutureDate,10,%
+Island Court,2019,Pending_WithFutureListing,3,%
+Island Court,2019,Pending_UnderCaseMgmt,85,%
+Island Court,2019,Pending_NoFutureDate,12,%
+Magistrates Court,2019,DV_Filings,950,
+Magistrates Court,2019,DV_Disposals,950,
+Magistrates Court,2019,DV_ClearanceRate,100,%
+Magistrates Court,2019,Location_Sanma_Filings,576,
+Magistrates Court,2019,Location_Sanma_Pct,26,%
+Magistrates Court,2019,Location_Shefa_Filings,554,
+Magistrates Court,2019,Location_Shefa_Pct,25,%
+Magistrates Court,2019,Location_Malampa_Filings,377,
+Magistrates Court,2019,Location_Malampa_Pct,17,%
+Magistrates Court,2019,Location_Tafea_Filings,355,
+Magistrates Court,2019,Location_Tafea_Pct,16,%
+Magistrates Court,2019,Location_Penama_Filings,222,
+Magistrates Court,2019,Location_Penama_Pct,10,%
+Magistrates Court,2019,Location_Torba_Filings,134,
+Magistrates Court,2019,Location_Torba_Pct,6,%
+Island Court,2019,Location_Sanma_Filings,80,
+Island Court,2019,Location_Sanma_Pct,28,%
+Island Court,2019,Location_Shefa_Filings,72,
+Island Court,2019,Location_Shefa_Pct,25,%
+Island Court,2019,Location_Malampa_Filings,49,
+Island Court,2019,Location_Malampa_Pct,17,%
+Island Court,2019,Location_Tafea_Filings,46,
+Island Court,2019,Location_Tafea_Pct,16,%
+Island Court,2019,Location_Penama_Filings,29,
+Island Court,2019,Location_Penama_Pct,10,%
+Island Court,2019,Location_Torba_Filings,10,
+Island Court,2019,Location_Torba_Pct,3,%
+Supreme Court,2019,ChargeOrders,1100,
+Magistrates Court,2019,ChargeOrders,168,
+Court of Appeal,2019,CoA_Civil_Dismissed,57,%
+Court of Appeal,2019,CoA_Civil_Allowed,29,%
+Court of Appeal,2019,CoA_Civil_Withdrawn,9,%
+Court of Appeal,2019,CoA_Criminal_Dismissed,53,%
+Court of Appeal,2019,CoA_Criminal_Allowed,32,%
+Court of Appeal,2019,CoA_Criminal_Withdrawn,10,%

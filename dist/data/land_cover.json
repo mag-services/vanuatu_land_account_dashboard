@@ -1,0 +1,783 @@
+{
+  "years": [
+    2020,
+    2023
+  ],
+  "provinces": [
+    "Malampa",
+    "Penama",
+    "Sanma",
+    "Shefa",
+    "Tafea",
+    "Torba"
+  ],
+  "categories": [
+    "Agriculture",
+    "Barelands",
+    "Builtup Infrastructure",
+    "Coconut plantations",
+    "Dense Forest",
+    "Grassland",
+    "Mangrove",
+    "Open Forest",
+    "Water bodies"
+  ],
+  "kpis": {
+    "total_2020": 12186.18,
+    "total_2023": 12186.18,
+    "change_percent": 0.0
+  },
+  "proportions_2023": [
+    {
+      "category": "Agriculture",
+      "area": 4704.67,
+      "percent": 38.6
+    },
+    {
+      "category": "Barelands",
+      "area": 456.11,
+      "percent": 3.7
+    },
+    {
+      "category": "Builtup Infrastructure",
+      "area": 99.54,
+      "percent": 0.8
+    },
+    {
+      "category": "Coconut plantations",
+      "area": 892.68,
+      "percent": 7.3
+    },
+    {
+      "category": "Dense Forest",
+      "area": 3154.03,
+      "percent": 25.9
+    },
+    {
+      "category": "Grassland",
+      "area": 391.76,
+      "percent": 3.2
+    },
+    {
+      "category": "Mangrove",
+      "area": 166.93,
+      "percent": 1.4
+    },
+    {
+      "category": "Open Forest",
+      "area": 2124.53,
+      "percent": 17.4
+    },
+    {
+      "category": "Water bodies",
+      "area": 195.93,
+      "percent": 1.6
+    }
+  ],
+  "physical": [
+    {
+      "category": "Agriculture",
+      "2020": 5046.87,
+      "2023": 4704.67,
+      "change": -342.2
+    },
+    {
+      "category": "Barelands",
+      "2020": 275.26,
+      "2023": 456.11,
+      "change": 180.85
+    },
+    {
+      "category": "Builtup Infrastructure",
+      "2020": 315.79,
+      "2023": 99.54,
+      "change": -216.25
+    },
+    {
+      "category": "Coconut plantations",
+      "2020": 1369.19,
+      "2023": 892.68,
+      "change": -476.51
+    },
+    {
+      "category": "Dense Forest",
+      "2020": 1796.49,
+      "2023": 3154.03,
+      "change": 1357.54
+    },
+    {
+      "category": "Grassland",
+      "2020": 1044.31,
+      "2023": 391.76,
+      "change": -652.55
+    },
+    {
+      "category": "Mangrove",
+      "2020": 151.63,
+      "2023": 166.93,
+      "change": 15.3
+    },
+    {
+      "category": "Open Forest",
+      "2020": 1821.45,
+      "2023": 2124.53,
+      "change": 303.08
+    },
+    {
+      "category": "Water bodies",
+      "2020": 365.19,
+      "2023": 195.93,
+      "change": -169.26
+    }
+  ],
+  "by_province": [
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Water bodies",
+      "area": 76.54
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Coconut plantations",
+      "area": 56.15
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Grassland",
+      "area": 61.94
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Mangrove",
+      "area": 4.71
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Agriculture",
+      "area": 285.55
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Barelands",
+      "area": 29.83
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Builtup Infrastructure",
+      "area": 51.8
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Dense Forest",
+      "area": 119.31
+    },
+    {
+      "province": "Torba",
+      "year": 2020,
+      "category": "Open Forest",
+      "area": 173.44
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Water bodies",
+      "area": 61.48
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Coconut plantations",
+      "area": 510.87
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Grassland",
+      "area": 495.7
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Mangrove",
+      "area": 22.87
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Agriculture",
+      "area": 1896.18
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Barelands",
+      "area": 44.55
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Builtup Infrastructure",
+      "area": 58.84
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Dense Forest",
+      "area": 441.27
+    },
+    {
+      "province": "Sanma",
+      "year": 2020,
+      "category": "Open Forest",
+      "area": 683.18
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Water bodies",
+      "area": 87.36
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Coconut plantations",
+      "area": 111.43
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Grassland",
+      "area": 104.29
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Mangrove",
+      "area": 18.8
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Agriculture",
+      "area": 398.57
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Barelands",
+      "area": 57.93
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Builtup Infrastructure",
+      "area": 88.97
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Dense Forest",
+      "area": 154.04
+    },
+    {
+      "province": "Penama",
+      "year": 2020,
+      "category": "Open Forest",
+      "area": 176.29
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Water bodies",
+      "area": 74.0
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Coconut plantations",
+      "area": 325.63
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Grassland",
+      "area": 165.51
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Mangrove",
+      "area": 42.54
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Agriculture",
+      "area": 1146.39
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Barelands",
+      "area": 111.08
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Builtup Infrastructure",
+      "area": 76.46
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Dense Forest",
+      "area": 530.96
+    },
+    {
+      "province": "Malampa",
+      "year": 2020,
+      "category": "Open Forest",
+      "area": 317.34
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Water bodies",
+      "area": 14.93
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Coconut plantations",
+      "area": 140.75
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Grassland",
+      "area": 149.34
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Mangrove",
+      "area": 8.95
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Agriculture",
+      "area": 689.63
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Barelands",
+      "area": 11.29
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Builtup Infrastructure",
+      "area": 15.36
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Dense Forest",
+      "area": 223.05
+    },
+    {
+      "province": "Shefa",
+      "year": 2020,
+      "category": "Open Forest",
+      "area": 244.96
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Water bodies",
+      "area": 50.88
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Coconut plantations",
+      "area": 224.36
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Grassland",
+      "area": 67.53
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Mangrove",
+      "area": 53.76
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Agriculture",
+      "area": 630.55
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Barelands",
+      "area": 20.58
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Builtup Infrastructure",
+      "area": 24.36
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Dense Forest",
+      "area": 327.86
+    },
+    {
+      "province": "Tafea",
+      "year": 2020,
+      "category": "Open Forest",
+      "area": 226.24
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Water bodies",
+      "area": 64.89
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Coconut plantations",
+      "area": 88.4
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Grassland",
+      "area": 32.81
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Mangrove",
+      "area": 2.89
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Agriculture",
+      "area": 314.78
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Barelands",
+      "area": 59.17
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Builtup Infrastructure",
+      "area": 8.0
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Dense Forest",
+      "area": 156.63
+    },
+    {
+      "province": "Torba",
+      "year": 2023,
+      "category": "Open Forest",
+      "area": 131.7
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Water bodies",
+      "area": 5.59
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Coconut plantations",
+      "area": 178.74
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Grassland",
+      "area": 120.66
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Mangrove",
+      "area": 19.69
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Agriculture",
+      "area": 2066.36
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Barelands",
+      "area": 123.44
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Builtup Infrastructure",
+      "area": 48.4
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Dense Forest",
+      "area": 756.43
+    },
+    {
+      "province": "Sanma",
+      "year": 2023,
+      "category": "Open Forest",
+      "area": 895.62
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Water bodies",
+      "area": 54.0
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Coconut plantations",
+      "area": 88.05
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Grassland",
+      "area": 14.24
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Mangrove",
+      "area": 13.64
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Agriculture",
+      "area": 528.39
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Barelands",
+      "area": 94.17
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Builtup Infrastructure",
+      "area": 9.46
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Dense Forest",
+      "area": 264.85
+    },
+    {
+      "province": "Penama",
+      "year": 2023,
+      "category": "Open Forest",
+      "area": 130.89
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Water bodies",
+      "area": 59.6
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Coconut plantations",
+      "area": 203.17
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Grassland",
+      "area": 78.39
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Mangrove",
+      "area": 58.11
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Agriculture",
+      "area": 399.81
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Barelands",
+      "area": 81.54
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Builtup Infrastructure",
+      "area": 14.72
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Dense Forest",
+      "area": 1276.3
+    },
+    {
+      "province": "Malampa",
+      "year": 2023,
+      "category": "Open Forest",
+      "area": 618.27
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Water bodies",
+      "area": 6.1
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Coconut plantations",
+      "area": 83.09
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Grassland",
+      "area": 116.07
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Mangrove",
+      "area": 7.22
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Agriculture",
+      "area": 738.44
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Barelands",
+      "area": 32.78
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Builtup Infrastructure",
+      "area": 14.66
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Dense Forest",
+      "area": 282.28
+    },
+    {
+      "province": "Shefa",
+      "year": 2023,
+      "category": "Open Forest",
+      "area": 217.62
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Water bodies",
+      "area": 5.75
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Coconut plantations",
+      "area": 251.23
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Grassland",
+      "area": 29.59
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Mangrove",
+      "area": 65.38
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Agriculture",
+      "area": 656.89
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Barelands",
+      "area": 65.01
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Builtup Infrastructure",
+      "area": 4.3
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Dense Forest",
+      "area": 417.54
+    },
+    {
+      "province": "Tafea",
+      "year": 2023,
+      "category": "Open Forest",
+      "area": 130.43
+    }
+  ]
+}
