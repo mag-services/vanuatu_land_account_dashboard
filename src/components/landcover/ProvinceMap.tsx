@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { getCategoryColor } from '@/lib/landCoverColors'
 import type { ByProvinceRow } from '@/types/landCover'
 
-const GADM_PROVINCES_URL = 'https://geodata.ucdavis.edu/gadm/gadm4.1/json/gadm41_VUT_1.json'
+const PROVINCES_GEOJSON_URL = `${import.meta.env.BASE_URL}assets/vanuatu-provinces.geojson`
 
 function getFeatureProvinceName(feature: GeoJSON.Feature): string {
   const props = (feature.properties ?? {}) as Record<string, string>
@@ -93,20 +93,10 @@ export const ProvinceMap = memo(function ProvinceMap({ byProvince }: ProvinceMap
   const selectedProvinces = [...new Set(byProvince.map((r) => r.province))]
 
   useEffect(() => {
-    fetch(GADM_PROVINCES_URL)
+    fetch(PROVINCES_GEOJSON_URL)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Not found'))))
       .then(setGeojson)
-      .catch(() => {
-        fetch(`${import.meta.env.BASE_URL}assets/vanuatu-provinces.geojson`)
-          .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Not found'))))
-          .then(setGeojson)
-          .catch(() => {
-            fetch('https://raw.githubusercontent.com/johan/world.geo.json/master/countries/VU.geo.json')
-              .then((res) => res.json())
-              .then(setGeojson)
-              .catch(() => {})
-          })
-      })
+      .catch(() => {})
   }, [])
 
   const fc = geojson && 'features' in geojson ? (geojson as FeatureCollection) : null

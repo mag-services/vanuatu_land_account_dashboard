@@ -76,7 +76,7 @@ export function LandCoverDashboard() {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 pb-28">
       <Filters
         provinces={data.provinces}
         categories={data.categories}
