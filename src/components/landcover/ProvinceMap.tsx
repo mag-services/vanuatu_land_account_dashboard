@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react'
+import { memo, useEffect, useMemo, useState } from 'react'
 import { MapContainer, TileLayer, GeoJSON, Popup, useMap } from 'react-leaflet'
 import L from 'leaflet'
 import type { FeatureCollection } from 'geojson'
@@ -26,7 +26,7 @@ function MapBoundsFitter({
   const map = useMap()
 
   useEffect(() => {
-    if (!geojson || !hasProvinces || selectedProvinces.length === 0) return
+    if (!geojson || !hasProvinces) return
     const fc = geojson as FeatureCollection
     const selectedSet = new Set(selectedProvinces.map((p) => p.toLowerCase()))
     const matchingFeatures = fc.features.filter((f) => {
@@ -38,7 +38,7 @@ function MapBoundsFitter({
       const layer = L.geoJSON({ type: 'FeatureCollection', features: featuresToFit } as GeoJSON.FeatureCollection)
       const bounds = layer.getBounds()
       if (bounds.isValid()) {
-        map.fitBounds(bounds, { padding: [24, 24], maxZoom: 12, animate: true })
+        map.fitBounds(bounds, { padding: [40, 40], maxZoom: 11, animate: true })
       }
     } catch {
       // ignore
@@ -53,6 +53,7 @@ interface ProvinceStats {
   dominantCategory: string
   dominantArea: number
   totalArea: number
+  categories: { name: string; area: number }[]
 }
 
 interface ProvinceMapProps {
@@ -74,14 +75,23 @@ function getProvinceStats(byProvince: ByProvinceRow[]): ProvinceStats[] {
     let dominant = ''
     let dominantArea = 0
     let total = 0
-    for (const [cat, area] of cats) {
-      total += area
-      if (area > dominantArea) {
-        dominant = cat
-        dominantArea = area
-      }
-    }
-    result.push({ province, dominantCategory: dominant, dominantArea, totalArea: total })
+    const sorted = [...cats.entries()]
+      .map(([name, area]) => {
+        total += area
+        if (area > dominantArea) {
+          dominant = name
+          dominantArea = area
+        }
+        return { name, area }
+      })
+      .sort((a, b) => b.area - a.area)
+    result.push({
+      province,
+      dominantCategory: dominant,
+      dominantArea,
+      totalArea: total,
+      categories: sorted,
+    })
   }
   return result
 }
@@ -91,6 +101,14 @@ export const ProvinceMap = memo(function ProvinceMap({ byProvince }: ProvinceMap
 
   const provinceStats = getProvinceStats(byProvince)
   const selectedProvinces = [...new Set(byProvince.map((r) => r.province))]
+
+  const legendCategories = useMemo(() => {
+    const seen = new Set<string>()
+    for (const s of provinceStats) {
+      if (s.dominantCategory) seen.add(s.dominantCategory)
+    }
+    return [...seen].sort()
+  }, [provinceStats])
 
   useEffect(() => {
     fetch(PROVINCES_GEOJSON_URL)
@@ -103,7 +121,7 @@ export const ProvinceMap = memo(function ProvinceMap({ byProvince }: ProvinceMap
   const hasProvinces = fc?.features?.length && fc.features.length > 1
 
   return (
-    <Card>
+    <Card className="border-white/20 dark:border-gray-700/30 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md shadow-lg">
       <CardHeader>
         <CardTitle>Vanuatu Map</CardTitle>
         <p className="text-sm text-muted-foreground">
@@ -111,7 +129,7 @@ export const ProvinceMap = memo(function ProvinceMap({ byProvince }: ProvinceMap
         </p>
       </CardHeader>
       <CardContent>
-        <div className="h-[320px] overflow-hidden rounded-lg border border-border/60">
+        <div className="relative h-[320px] overflow-hidden rounded-xl border border-white/20 dark:border-gray-700/30 shadow-lg ring-1 ring-black/5">
           <MapContainer
             center={CENTER}
             zoom={ZOOM}
@@ -134,28 +152,60 @@ export const ProvinceMap = memo(function ProvinceMap({ byProvince }: ProvinceMap
                   const name = props.ADM1_EN ?? props.name ?? props.NAME_1 ?? props.Province ?? `Province ${i + 1}`
                   const stats = provinceStats.find((s) => s.province === name)
                   const color = stats ? getCategoryColor(stats.dominantCategory) : '#94a3b8'
+                  const baseStyle = {
+                    fillColor: color,
+                    fillOpacity: 0.65,
+                    color: '#334155',
+                    weight: 1.5,
+                  }
                   return (
                     <GeoJSON
                       key={i}
                       data={feature}
-                      style={{
-                        fillColor: color,
-                        fillOpacity: 0.65,
-                        color: '#334155',
-                        weight: 1.5,
+                      style={baseStyle}
+                      onEachFeature={(_, layer) => {
+                        layer.on('mouseover', () => {
+                          layer.setStyle({
+                            ...baseStyle,
+                            weight: 2.5,
+                            fillOpacity: 0.88,
+                            color: '#1e293b',
+                          })
+                          layer.bringToFront()
+                        })
+                        layer.on('mouseout', () => {
+                          layer.setStyle(baseStyle)
+                        })
                       }}
                     >
                       <Popup>
-                        <div className="min-w-[160px] text-sm">
-                          <strong>{name}</strong>
+                        <div className="min-w-[200px] text-sm">
+                          <strong className="text-base">{name}</strong>
                           {stats ? (
                             <>
-                              <br />
-                              Dominant: {stats.dominantCategory}
-                              <br />
-                              Area: {stats.dominantArea.toFixed(0)} sq km
-                              <br />
-                              Total: {stats.totalArea.toFixed(0)} sq km
+                              <div className="mt-2 space-y-1 border-t border-border/60 pt-2">
+                                {stats.categories.slice(0, 3).map((c) => (
+                                  <div
+                                    key={c.name}
+                                    className="flex items-center gap-2"
+                                  >
+                                    <span
+                                      className="size-3 shrink-0 rounded-sm"
+                                      style={{
+                                        backgroundColor: getCategoryColor(c.name),
+                                      }}
+                                    />
+                                    <span className="flex-1">{c.name}</span>
+                                    <span className="tabular-nums text-muted-foreground">
+                                      {c.area.toFixed(0)} sq km
+                                    </span>
+                                  </div>
+                                ))}
+                              </div>
+                              <div className="mt-2 flex justify-between border-t border-border/60 pt-2 font-semibold">
+                                <span>Total</span>
+                                <span>{stats.totalArea.toFixed(0)} sq km</span>
+                              </div>
                             </>
                           ) : null}
                         </div>
@@ -184,6 +234,32 @@ export const ProvinceMap = memo(function ProvinceMap({ byProvince }: ProvinceMap
               )
             )}
           </MapContainer>
+          {hasProvinces && legendCategories.length > 0 && (
+            <div
+              className="absolute bottom-2 right-2 z-[1000] rounded-lg border border-white/20 bg-white/80 px-3 py-2 shadow-lg backdrop-blur-md dark:border-gray-700/30 dark:bg-gray-900/80"
+              aria-label="Map legend"
+            >
+              <p className="mb-1.5 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                Dominant land cover
+              </p>
+              <div className="space-y-1">
+                {legendCategories.map((cat) => (
+                  <div
+                    key={cat}
+                    className="flex items-center gap-2 text-xs"
+                  >
+                    <span
+                      className="size-3.5 shrink-0 rounded-sm"
+                      style={{
+                        backgroundColor: getCategoryColor(cat),
+                      }}
+                    />
+                    <span>{cat}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
         {!hasProvinces && geojson && (
           <p className="mt-2 text-xs text-muted-foreground">

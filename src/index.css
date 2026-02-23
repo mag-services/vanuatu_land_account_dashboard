@@ -2,6 +2,11 @@
 
 :root {
   font-family: 'Inter', system-ui, sans-serif;
+  color-scheme: light dark;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 /* Horizon UI-inspired palette: purple & light blue */

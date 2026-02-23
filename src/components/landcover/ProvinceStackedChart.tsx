@@ -33,7 +33,7 @@ export const ProvinceStackedChart = memo(function ProvinceStackedChart({
 
   if (provinces.length === 0) {
     return (
-      <Card>
+      <Card className="border-white/20 dark:border-gray-700/30 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md shadow-lg">
         <CardHeader>
           <CardTitle>Land Cover by Province ({year})</CardTitle>
         </CardHeader>
@@ -46,23 +46,45 @@ export const ProvinceStackedChart = memo(function ProvinceStackedChart({
 
   const options: Highcharts.Options = {
     chart: { type: 'bar', height: 340 },
-    xAxis: { categories: provinces },
-    yAxis: { title: { text: 'Area (sq km)' }, gridLineDashStyle: 'Dot' },
+    xAxis: {
+      categories: provinces,
+      labels: {
+        style: { fontSize: '12px', fontWeight: '500' },
+        x: -8,
+      },
+      lineWidth: 0,
+      tickWidth: 0,
+      gridLineColor: 'rgba(0,0,0,0.06)',
+    },
+    yAxis: {
+      title: { text: 'Area (sq km)' },
+      gridLineColor: 'rgba(0,0,0,0.06)',
+      gridLineDashStyle: 'Dot',
+      lineWidth: 0,
+      tickWidth: 0,
+      labels: { style: { fontSize: '11px' } },
+    },
     plotOptions: {
       bar: {
         stacking: 'normal',
         borderWidth: 0,
+        borderRadius: 4,
         dataLabels: { enabled: false },
       },
     },
-    tooltip: { shared: true },
+    tooltip: {
+      shared: true,
+      backgroundColor: 'rgba(255,255,255,0.95)',
+      borderColor: 'rgba(0,0,0,0.08)',
+      borderRadius: 8,
+    },
     series: series as Highcharts.SeriesOptionsType[],
     legend: { enabled: true },
     credits: { enabled: false },
   }
 
   return (
-    <Card>
+    <Card className="border-white/20 dark:border-gray-700/30 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md shadow-lg">
       <CardHeader>
         <CardTitle>Land Cover by Province ({year})</CardTitle>
         <p className="text-sm text-muted-foreground">

@@ -35,9 +35,10 @@ export function LandCoverDataTable({ data }: { data: ByProvinceRow[] }) {
           type="button"
           className="flex items-center gap-1 hover:text-foreground"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+          aria-label={`Sort by Province ${column.getIsSorted() === 'asc' ? 'descending' : 'ascending'}`}
         >
           Province
-          <ArrowUpDown className="size-4" />
+          <ArrowUpDown className="size-4" aria-hidden />
         </button>
       ),
     },
@@ -126,16 +127,26 @@ export function LandCoverDataTable({ data }: { data: ByProvinceRow[] }) {
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold">Detailed Data</h3>
-        <Button variant="outline" size="sm" onClick={exportCsv} className="gap-1.5">
-          <Download className="size-4" />
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={exportCsv}
+          className="gap-1.5"
+          aria-label="Export data as CSV"
+        >
+          <Download className="size-4" aria-hidden />
           Export CSV
         </Button>
       </div>
-      <div className="rounded-md border">
+      <div
+        className="max-h-[480px] overflow-auto rounded-xl border border-white/20 dark:border-gray-700/30 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md shadow-lg"
+        role="region"
+        aria-label="Land cover data table"
+      >
         <Table>
-          <TableHeader>
+          <TableHeader className="sticky top-0 z-10 border-b border-border/60 bg-white/95 dark:bg-gray-900/95 shadow-sm backdrop-blur-sm">
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id}>
+              <TableRow key={headerGroup.id} className="sticky top-0 z-10 border-white/20 dark:border-gray-700/30 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm">
                 {headerGroup.headers.map((header) => {
                   const meta = header.column.columnDef.meta as { className?: string } | undefined
                   return (
@@ -151,8 +162,15 @@ export function LandCoverDataTable({ data }: { data: ByProvinceRow[] }) {
           </TableHeader>
           <TableBody>
             {table.getRowModel().rows?.length ? (
-              table.getRowModel().rows.map((row) => (
-                <TableRow key={row.id}>
+              table.getRowModel().rows.map((row, idx) => (
+                <TableRow
+                  key={row.id}
+                  className={
+                    idx % 2 === 1
+                      ? 'bg-muted/20 dark:bg-muted/10 hover:bg-white/60 dark:hover:bg-gray-900/60 transition-colors'
+                      : 'hover:bg-white/60 dark:hover:bg-gray-900/60 transition-colors'
+                  }
+                >
                   {row.getVisibleCells().map((cell) => {
                     const meta = cell.column.columnDef.meta as { className?: string } | undefined
                     return (

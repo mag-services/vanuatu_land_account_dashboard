@@ -136,7 +136,7 @@ export function Filters({
       <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
         <SheetContent
           side="bottom"
-          className="max-h-[85vh] rounded-t-2xl pb-8 md:hidden"
+          className="max-h-[85vh] rounded-t-2xl border-white/20 dark:border-gray-700/30 bg-white/75 dark:bg-gray-900/65 backdrop-blur-md pb-8 md:hidden transition-[transform] duration-300 ease-out data-[state=closed]:duration-200"
           showCloseButton
         >
           <SheetHeader className="border-b border-border/60 pb-4">
@@ -151,14 +151,15 @@ export function Filters({
               categories={categories}
               filters={filters}
               onFiltersChange={onFiltersChange}
+              className="[&_button]:min-h-[44px] [&_[role=combobox]]:min-h-[44px] md:[&_button]:min-h-0 md:[&_[role=combobox]]:min-h-0"
             />
           </div>
         </SheetContent>
       </Sheet>
 
       {/* Desktop: floating bar at bottom */}
-      <div className="fixed bottom-0 left-0 right-0 z-[1100] hidden rounded-t-xl border border-b-0 border-border/60 bg-background/95 shadow-[0_-4px_24px_-4px_rgba(0,0,0,0.12)] backdrop-blur-md supports-[backdrop-filter]:bg-background/80 md:block">
-        <div className="mx-auto max-w-6xl px-4 py-3">
+      <div className="fixed bottom-0 left-1/2 z-[1100] hidden -translate-x-1/2 md:block">
+        <div className="w-fit rounded-t-xl border border-b-0 border-white/20 dark:border-gray-700/30 bg-white/75 dark:bg-gray-900/65 px-4 py-3 shadow-[0_-4px_24px_-4px_rgba(0,0,0,0.08)] backdrop-blur-md">
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-end sm:justify-center">
             <FilterContent
               provinces={provinces}

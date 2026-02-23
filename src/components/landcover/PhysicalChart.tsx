@@ -17,7 +17,7 @@ export const PhysicalChart = memo(function PhysicalChart({
 }: PhysicalChartProps) {
   if (physical.length === 0) {
     return (
-      <Card>
+      <Card className="border-white/20 dark:border-gray-700/30 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md shadow-lg">
         <CardHeader>
           <CardTitle>Physical Account for Land Cover</CardTitle>
         </CardHeader>
@@ -59,51 +59,76 @@ export const PhysicalChart = memo(function PhysicalChart({
       categories,
       labels: { rotation: -35, style: { fontSize: '11px' } },
       crosshair: true,
+      lineWidth: 0,
+      tickWidth: 0,
     },
     yAxis: [
       {
         title: { text: 'Area (sq km)' },
         labels: { format: '{value}' },
+        gridLineColor: 'rgba(0,0,0,0.06)',
         gridLineDashStyle: 'Dot',
+        lineWidth: 0,
+        tickWidth: 0,
       },
       {
         title: { text: 'Change (sq km)' },
         opposite: true,
         labels: { format: '{value}' },
         gridLineWidth: 0,
+        lineWidth: 0,
+        tickWidth: 0,
       },
     ],
     tooltip: {
       shared: true,
       useHTML: true,
+      backgroundColor: 'rgba(255,255,255,0.95)',
+      borderColor: 'rgba(0,0,0,0.08)',
+      borderRadius: 8,
+      shadow: true,
       formatter() {
         if (!this.points) return ''
         const idx = this.points[0]?.point.index ?? 0
         const cat = categories[idx]
         const p = physical[idx]
+        const changePct =
+          p['2020'] > 0
+            ? (((p['2023'] - p['2020']) / p['2020']) * 100).toFixed(1)
+            : '0'
+        const changeSign = Number(changePct) >= 0 ? '+' : ''
         return `
-          <b>${cat}</b><br/>
-          2020: ${p['2020'].toLocaleString()} sq km<br/>
-          2023: ${p['2023'].toLocaleString()} sq km<br/>
-          Change: ${p.change >= 0 ? '+' : ''}${p.change.toLocaleString()} sq km
+          <div style="padding:4px 0">
+            <b>${cat}</b><br/>
+            <span style="color:#4a5568">2020:</span> ${p['2020'].toLocaleString()} sq km<br/>
+            <span style="color:#3182ce">2023:</span> ${p['2023'].toLocaleString()} sq km<br/>
+            <span style="margin-top:4px;display:block;font-weight:600;color:${p.change >= 0 ? '#059669' : '#dc2626'}">
+              Change: ${p.change >= 0 ? '+' : ''}${p.change.toLocaleString()} sq km (${changeSign}${changePct}%)
+            </span>
+          </div>
         `
       },
     },
     plotOptions: {
       column: {
         borderWidth: 0,
+        borderRadius: 5,
         grouping: true,
         pointPadding: 0.1,
         groupPadding: 0.15,
       },
     },
     series,
-    legend: { enabled: true },
+    legend: {
+      enabled: true,
+      symbolRadius: 4,
+      itemStyle: { fontWeight: '500' },
+    },
     credits: { enabled: false },
   }
 
   return (
-    <Card>
+    <Card className="border-white/20 dark:border-gray-700/30 bg-white/70 dark:bg-gray-900/60 backdrop-blur-md shadow-lg">
       <CardHeader>
         <CardTitle>Physical Account for Land Cover</CardTitle>
         <p className="text-sm text-muted-foreground">
