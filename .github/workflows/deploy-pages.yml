@@ -1,3 +1,6 @@
+# Requires: repo Settings → Pages → Build and deployment → Source: GitHub Actions
+# Enable Pages once before this workflow will succeed.
+
 name: Deploy to GitHub Pages
 
 on:
